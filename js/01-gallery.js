@@ -23,20 +23,18 @@ function openImg(event) {
     const imgSrc = event.target.dataset.source;
    
     if (event.target.nodeName !== "IMG") {
-        return 
-    } 
-     const instance = basicLightbox.create(
+        return
+    }
+    const instance = basicLightbox.create(
         `<img src= ${imgSrc} width="800" height="600">`)
     instance.show()
 
     galleryDiv.addEventListener("keydown", closeImg);
-
+ 
     function closeImg(e) {
-    if (e.key === "Escape") {
-    instance.close()
-    }
-};
+        if (e.key === "Escape") {
+            instance.close()
+        };
+    };
 }
-
-console.log(galleryItems);
 
